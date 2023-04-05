@@ -94,6 +94,7 @@ nav ul li{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'Alkatra', sans-serif;
 }
 
 .icons{
@@ -107,4 +108,14 @@ nav ul li{
 #progressBar{
     width: 80vw;
 
+}
+
+.songInfo{
+    position:absolute;
+    left:10vw;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 1s ease-in;
 }
