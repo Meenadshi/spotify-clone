@@ -39,8 +39,23 @@ nav ul li{
 }
 
 .container{
-    min-height: 75vh;
-    
+    min-height: 50vh;
+    background-color: black;
+    color: white;
+    font-family: 'Germania One', cursive;
+    display: flex;
+    width: 70%;
+    margin: 23px auto;
+    border-radius: 12px;
+    padding: 34px;
+    /* background-image: url('assets/image/vijay_background.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+songItem{
+    height:50px;
 }
 
 .bottom{
