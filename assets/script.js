@@ -50,14 +50,30 @@ const makeAllPlays = () => {
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) => {
     element.addEventListener('click', (e) =>{
         makeAllPlays();
-        songIndex = "audio" + parseInt(e.target.id); 
-        console.log(index)
+        songIndex = parseInt(e.target.id)
+        index = "audio" + ( songIndex + 1);
+        // console.log(songIndex)
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioElement.src = '/assets/audio/'+ songIndex +'.mp3';
+        audioElement.src = '/assets/audio/'+ index +'.mp3';
         audioElement.currentTime = 0;
         audioElement.play();
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
     })
 })
+
+document.getElementById('previousSong').addEventListener('click', () => {
+    if(songIndex >= 3){
+        songIndex = 0;
+    }else{
+    songIndex += 1;
+    }
+    index = "audio" + (songIndex + 1);
+    audioElement.src = '/assets/audio/'+ index +'.mp3';
+        audioElement.currentTime = 0;
+        audioElement.play();
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+})
+
