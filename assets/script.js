@@ -2,6 +2,7 @@ console.log("Welcome to Spotify-Clone");
 let songIndex = 0;
 let audioElement = new Audio('/assets/audio/audio1.mp3');
 let masterPlay = document.getElementById('masterPlay');
+let masterSongName = document.getElementById('masterSongName');
 let progressBar = document.getElementById('progressBar');
 let gif = document.getElementById('gif');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
@@ -58,6 +59,8 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
         audioElement.src = '/assets/audio/'+ index +'.mp3';
         audioElement.currentTime = 0;
         audioElement.play();
+        gif.style.opacity = 1;
+        masterSongName.innerText = songs[songIndex].songName;
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
     })
@@ -73,6 +76,7 @@ document.getElementById('previousSong').addEventListener('click', () => {
     audioElement.src = '/assets/audio/'+ index +'.mp3';
         audioElement.currentTime = 0;
         audioElement.play();
+        masterSongName.innerText = songs[songIndex].songName;
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
 })
@@ -87,6 +91,7 @@ document.getElementById('nextSong').addEventListener('click', () => {
     audioElement.src = '/assets/audio/'+ index +'.mp3';
         audioElement.currentTime = 0;
         audioElement.play();
+        masterSongName.innerText = songs[songIndex].songName;
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
 })
