@@ -64,6 +64,20 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
 })
 
 document.getElementById('previousSong').addEventListener('click', () => {
+    if(songIndex <= 0){
+        songIndex = 3;
+    }else{
+    songIndex -= 1;
+    }
+    index = "audio" + (songIndex + 1);
+    audioElement.src = '/assets/audio/'+ index +'.mp3';
+        audioElement.currentTime = 0;
+        audioElement.play();
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+})
+
+document.getElementById('nextSong').addEventListener('click', () => {
     if(songIndex >= 3){
         songIndex = 0;
     }else{
@@ -76,4 +90,3 @@ document.getElementById('previousSong').addEventListener('click', () => {
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
 })
-
