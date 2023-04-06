@@ -177,3 +177,18 @@ input[type=text], input[type=password] {
   .search{
     display: flex;
   }
+
+  form.search button {
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.search button:hover {
+    background: #0b7dda;
+  }
