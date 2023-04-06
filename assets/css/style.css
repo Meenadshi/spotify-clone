@@ -26,6 +26,11 @@ nav ul li{
     padding: 0 12px;
 }
 
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
 nav ul li button{
     background-color: #4CAF50;
   border: none;
@@ -60,11 +65,10 @@ nav ul li button:hover{
     background-color: black;
     color: white;
     font-family: 'Germania One', cursive;
-    display: flex;
     width: 70%;
     margin: 23px auto;
     border-radius: 12px;
-    padding: 34px;
+    padding: 35px;
     /* background-image: url('assets/image/vijay_background.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
@@ -136,3 +140,36 @@ nav ul li button:hover{
     opacity: 0;
     transition: opacity 0.3s ease-in;
 }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  form button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+  }
+  
+  form button:hover {
+    opacity:1;
+  }
+
+  .cancelbtn, .loginbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+
+  .cancelbtn{
+    background-color: #f44336;
+  }

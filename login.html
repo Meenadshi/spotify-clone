@@ -11,15 +11,33 @@
     <nav>
         <ul>
             <li class="logo"><img src="assets/image/logo_img.png" alt="Spotify logo">Spotify</li>
-            <li>Home</li>
+            <li><a href="index.html">Home</a></li>
             <li>About</li>
             <li><button onclick = "window.location.href = 'signup.html';">Sign Up</button></li>
             <li><button onclick="window.location.href = 'login.html';">Login</button></li>
         </ul>
     </nav>
+    <form action='index.html'>
     <div class="container" style="height: 70vh">
+        <!-- <center> -->
+        <h1>Login</h1><br>
+        <p>Enter your account credentials to login.</p><br>
+        <hr><br>
+        <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
 
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    <div class="clearfix">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <a href="index.html"><button type="submit" class="loginbtn">Login</button></a>
     </div>
+    <!-- </center> -->
+    </div>
+    </form>
     <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
 </body>
 </html>
