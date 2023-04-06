@@ -173,3 +173,7 @@ input[type=text], input[type=password] {
   .cancelbtn{
     background-color: #f44336;
   }
+
+  .search{
+    display: flex;
+  }
